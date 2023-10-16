@@ -58,3 +58,38 @@ void print_number(int n)
 		divisor /= 10;
 	}
 }
+void print_octal(int num)
+{
+	char octal_str[100];
+	int i, len, j;
+	int remainder;
+	char temp;
+	
+	i = 0;
+
+	if (num == 0)
+	{
+		octal_str[0] = '0';
+		octal_str[1] = '\0';
+		_puts(octal_str);
+		return;
+	}
+	
+	while (num != 0)
+	{
+		remainder = num % 8;
+		octal_str[i++] = (char) (remainder + '0');
+		num /= 8;
+	}
+
+	octal_str[i] = '\0';
+
+	len = i;
+	for (j = 0; j < len / 2; j++)
+	{
+		temp = octal_str[j];
+		octal_str[j] = octal_str[len - j - 1];
+		octal_str[len - j - 1] = temp;
+	}
+	_puts(octal_str);
+}
