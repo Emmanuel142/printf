@@ -4,11 +4,11 @@
 int _printf(const char *format, ...)
 {
 	va_list(args);
-	va_start(args, format);
 	char c;
 	char *s;
 	int d, x;
 	unsigned int b, u;
+	va_start(args,format);
 
 	while (*format != '\0')
 	{
@@ -53,10 +53,10 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(*format);
-			format++
+			format++;
 		}
-		flush_buffer();
-		va_end(args);
-		return (0);
+	flush_buffer();
 	}
+	va_end(args);
+	return(0);
 }

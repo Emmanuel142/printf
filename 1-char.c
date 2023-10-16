@@ -1,6 +1,10 @@
 #include "main.h"
 /**
  */
+
+char output_buffer[BUFFERSIZE];
+int bufer_index = 0;
+
 int _puts(const char *string)
 {
 	while (*string != '\0')
