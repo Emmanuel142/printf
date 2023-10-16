@@ -10,11 +10,9 @@ int _puts(const char *string);
 void print_number(int n);
 int _printf(const char *format, ...);
 void flush_buffer(void);
-void _putchar(char c);
+void _putchar(char ch);
 void print_unsign(unsigned int n);
+void print_binary(unsigned int number);
 
-
-char output_buffer[BUFFERSIZE];
-int bufer_index = 0;
 
 #endif
