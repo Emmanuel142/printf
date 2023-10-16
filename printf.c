@@ -6,7 +6,7 @@ int _printf(const char *format, ...)
 	va_list(args);
 	char c;
 	char *s;
-	int d, x;
+	int d, x, count;
 	unsigned int b, u;
 	va_start(args,format);
 
@@ -54,9 +54,10 @@ int _printf(const char *format, ...)
 		{
 			_putchar(*format);
 		}
+		count++;
 		format++;
 	}
 	flush_buffer();
 	va_end(args);
-	return(0);
+	return(count);
 }
