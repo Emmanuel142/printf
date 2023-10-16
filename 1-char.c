@@ -7,12 +7,15 @@ int bufer_index = 0;
 
 int _puts(const char *string)
 {
+	int len;
+	len = 0;
 	while (*string != '\0')
 	{
 		_putchar(*string);
 		string++;
+		len++;
 	}
-	return (0);
+	return (len);
 }
 
 /**
