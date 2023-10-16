@@ -53,10 +53,10 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(*format);
-			format++;
 		}
-	flush_buffer();
+		format++;
 	}
+	flush_buffer();
 	va_end(args);
 	return(0);
 }
