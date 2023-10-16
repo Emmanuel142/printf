@@ -12,4 +12,9 @@ int _printf(const char *format, ...);
 void flush_buffer(void);
 void _putchar(char c);
 void print_unsign(unsigned int n);
+
+
+char output_buffer[BUFFERSIZE];
+int bufer_index = 0;
+
 #endif
