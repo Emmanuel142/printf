@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define BUFFERSIZE 1024
+#define BUFFERSIZE 1
 
 int _puts(const char *string);
 void print_number(int n);
