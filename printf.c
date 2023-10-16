@@ -7,7 +7,7 @@ int _printf(const char *format, ...)
 	char c;
 	char *s;
 	int d, x, count;
-	unsigned int b, u;
+	unsigned int b, u, o;
 	va_start(args,format);
 
 	while (*format != '\0')
@@ -44,6 +44,10 @@ int _printf(const char *format, ...)
 				case 'x':
 					x = va_arg(args, int);
 					print_unsign(x);
+					break;
+				case 'o':
+					o = va_arg(args, unsigned int);
+					print_octal(o);
 					break;
 				default:
 					_putchar(*format);

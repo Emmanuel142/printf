@@ -58,11 +58,11 @@ void print_number(int n)
 		divisor /= 10;
 	}
 }
-void print_octal(int num)
+void print_octal(unsigned int num)
 {
 	char octal_str[100];
-	int i, len, j;
-	int remainder;
+	unsigned int i, len, j;
+	unsigned int remainder;
 	char temp;
 	
 	i = 0;

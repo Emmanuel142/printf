@@ -6,6 +6,7 @@
 
 #define BUFFERSIZE 1024
 
+void print_octal(unsigned int num);
 int _puts(const char *string);
 void print_number(int n);
 int _printf(const char *format, ...);
