@@ -22,14 +22,11 @@ int _puts(const char *string)
  */
 void _putchar(char c)
 {
-	/**
 	if (bufer_index == (BUFFERSIZE - 1))
 	{
 		flush_buffer();
 	}
 	output_buffer[bufer_index++] = c;
-	*/
-	 write(1, &c, 1);
 }
 /**
  */

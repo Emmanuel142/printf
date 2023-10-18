@@ -25,13 +25,16 @@ void print_binary(unsigned int num)
  */
 void print_unsign(unsigned int n)
 {
-	unsigned int divisor = 1;
+	unsigned int divisor, digits;
+
+	divisor= 1;
 	while (n / divisor >= 10)
 		divisor *= 10;
 
-	while (divisor != 0) {
-		unsigned int digit = n / divisor;
-		_putchar(digit + '0');
+	while (divisor != 0)
+	{
+		digits = n / divisor;
+		_putchar(digits + '0');
 		n %= divisor;
 		divisor /= 10;
 	}
@@ -92,4 +95,37 @@ void print_octal(unsigned int num)
 		octal_str[len - j - 1] = temp;
 	}
 	_puts(octal_str);
+}
+void print_hex(unsigned int num)
+{
+	char hex_str[100];
+	const char* hex_digits = "0123456789ABCDEF";
+	unsigned int i, remainder, len, j;
+	char temp;
+
+	i = 0;
+	if (num == 0)
+	{
+		hex_str[0] = '0';
+		hex_str[1] = '\0';
+		_puts(hex_str);
+		return;
+	}
+
+	while (num != 0)
+	{
+		remainder = num % 16;
+		hex_str[i++] = hex_digits[remainder];
+		num /= 16;
+	}
+
+	hex_str[i] = '\0';
+	len = i;
+	for (j = 0; j < len / 2; j++)
+	{
+		temp = hex_str[j];
+		hex_str[j] = hex_str[len - j - 1];
+		hex_str[len - j - 1] = temp;
+	}
+	_puts(hex_str);
 }
