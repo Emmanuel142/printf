@@ -99,7 +99,7 @@ void print_octal(unsigned int num)
 void print_hex(unsigned int num)
 {
 	char hex_str[100];
-	const char* hex_digits = "0123456789ABCDEF";
+	const char* hex_digits = "0123456789abcdef";
 	unsigned int i, remainder, len, j;
 	char temp;
 
