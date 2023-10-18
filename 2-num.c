@@ -3,7 +3,7 @@
  */
 void print_binary(unsigned int num)
 {
-	int bit, i;
+	unsigned int bit, i;
 	int bits = sizeof(unsigned int) * 8;
 
 	int significant_bit_encountered = 0;
